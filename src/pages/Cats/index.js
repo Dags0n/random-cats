@@ -1,5 +1,10 @@
+import { Header } from '../../components'
 import './style.css'
 
 export const Cats = () => {
-  return <div>todos os gatos</div>
+  return (
+    <div>
+      <Header />
+    </div>
+  )
 }

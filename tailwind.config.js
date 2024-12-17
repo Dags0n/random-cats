@@ -13,6 +13,12 @@ module.exports = {
           foreground: '#FAFAFA',
         },
       },
+      fontFamily: {
+        title: '"Francois One", serif',
+      },
+      backgroundImage: {
+        'header-image': "url('/src/assets/header-bg.png')",
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],
