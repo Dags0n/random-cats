@@ -19,6 +19,12 @@ module.exports = {
       backgroundImage: {
         'header-image': "url('/src/assets/header-bg.png')",
       },
+      backgroundSize: {
+        auto: 'auto',
+        cover: 'cover',
+        contain: 'contain',
+        half: '50%',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],
