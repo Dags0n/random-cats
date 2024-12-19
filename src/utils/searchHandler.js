@@ -1,16 +1,17 @@
+import { getRandomNumber } from './getRandomNumber'
 import { getCatByTag } from './url'
 
-export const searchHandler = async (event, setCatTags, setLoading) => {
-  const searchValue = event.target.value.trim()
-  if (!searchValue) return
+export const searchHandler = async (event, setCatId, setLoading) => {
+  const searchValue = event.target.value
   try {
     setLoading(true)
     const url = getCatByTag(searchValue)
     const response = await fetch(url)
-    const data = (await response.json()).map((cat) => cat.tags)
-    setCatTags(data[0] || [])
+    const data = await response.json()
+    const index = getRandomNumber(0, data.length - 1)
+    setCatId(data[index]._id)
   } catch {
-    setCatTags([])
+    setCatId('')
   } finally {
     setLoading(false)
   }

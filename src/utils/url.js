@@ -17,8 +17,3 @@ export const getTotalCats = () => {
 export const findCatById = (id) => {
   return `${baseUrl}/${id}`
 }
-
-export const findCatByTags = (tags) => {
-  const formattedTags = tags.toString()
-  return `${baseUrl}/${formattedTags}`
-}
