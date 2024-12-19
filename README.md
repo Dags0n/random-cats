@@ -14,7 +14,7 @@
 
 ## 💻 Sobre o projeto
 
-[Em construção...]
+Aplicação desenvolvida para a vídeo aula sobre React da disciplina de Desenvolvimento Web I. O projeto consiste em exibir imagens aleatórias de gatos disponibilizadas pela API [Cat as a service](https://cataas.com/).
 
 ---
 
@@ -51,6 +51,8 @@ Clique [aqui](https://www.figma.com/design/SZARXVPls0k2kCbeWDkWTT/React?node-id=
 
 - React
 - Tailwind
+- Material UI
+- React Router DOM
 
 ---
 
