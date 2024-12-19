@@ -6,6 +6,10 @@ export const getAllCats = ({ limit, skip }) => {
   return `${apiUrl}/cats?limit=${limit}&skip=${skip}`
 }
 
+export const getCatByTag = (tag) => {
+  return `${apiUrl}/cats?tags=${tag}`
+}
+
 export const getTotalCats = () => {
   return `${apiUrl}/count`
 }
