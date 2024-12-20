@@ -1,20 +1,13 @@
 import { useEffect, useState } from 'react'
-import { Header, Image } from '../../components'
-import Pagination from '@mui/material/Pagination'
-import { fetchData } from '../../utils/fetchData'
-import { getAllCats, getTotalCats } from '../../utils/url'
-import './style.css'
 import { Link } from 'react-router-dom'
-
-const LIMIT = 12
+import { Header, Image } from '../../components'
+import './style.css'
 
 export const Favorites = () => {
   const [catsList, setCatsList] = useState([])
-  const [total, setTotal] = useState(10)
-  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
-    setCatsList(JSON.parse(localStorage.getItem("favCats")))
+    setCatsList(JSON.parse(localStorage.getItem('favCats')))
   }, [])
 
   return (
