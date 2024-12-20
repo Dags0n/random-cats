@@ -43,9 +43,7 @@ export const Gallery = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-6">
           {catsList.map((catId) => (
-            <>
-              <Image key={catId} id={catId} />
-            </>
+            <Image key={catId} id={catId} />
           ))}
         </div>
         <Pagination count={total} page={currentPage} onChange={(_, page) => setCurrentPage(page)} />

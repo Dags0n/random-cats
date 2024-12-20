@@ -1,4 +1,4 @@
-import { baseUrl, findCatById, getRandomCat } from '../utils/url'
+import { findCatById } from '../utils/url'
 
 export const Image = ({ id = null, height = 'h-64', width = 'w-full', ref = null }) => {
   let url = ''
