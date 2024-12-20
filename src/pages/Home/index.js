@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Save, Heart, Trash } from 'react-feather'
+import { ArrowRight, Heart, Trash } from 'react-feather'
 import { Header, SearchField, Image, Loading, Button } from '../../components'
 import { searchHandler } from '../../utils/searchHandler'
 
@@ -46,13 +46,12 @@ export const Home = () => {
       <SearchField placeholder="Buscar gatinho" onKeyDown={(e) => handleOnKeyDown(e)} />
       <main className="p-10 flex flex-col items-center">
         {loading || !catId ? <Loading /> : <Image id={catId} height="h-[70vh]" width="w-full md:w-2/3" />}
-        <div className="flex justify-center gap-4 mt-6">
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
           {isFavorited ? (
             <Button Icon={Trash} label="Desfavoritar gato" onClick={(e) => handleFavCat(false)} />
           ) : (
             <Button Icon={Heart} label="Favoritar gato" onClick={(e) => handleFavCat(true)} />
           )}
-          <Button Icon={Save} label="Salvar gato" />
           <Link to="galeria">
             <Button Icon={ArrowRight} label="Ver mais gatos" />
           </Link>
