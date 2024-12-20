@@ -17,3 +17,7 @@ export const getTotalCats = () => {
 export const findCatById = (id) => {
   return `${baseUrl}/${id}`
 }
+
+export const getRandomCat = () =>{
+  return `${baseUrl}?json=true`
+}
