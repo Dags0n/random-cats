@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Header, Image, Favorite } from '../../components'
+import { Header, Favorite } from '../../components'
 import './style.css'
 
 export const Favorites = () => {
@@ -32,11 +32,9 @@ export const Favorites = () => {
           <span className="font-semibold">Favoritos</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-6">
-
           {catsList.map((catId) => (
             <Favorite key={catId} id={catId} onClick={() => handleFavCat(catId)} />
           ))}
-
         </div>
       </main>
     </>
