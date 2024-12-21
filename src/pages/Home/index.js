@@ -35,6 +35,9 @@ export const Home = () => {
       var favCats = []
       localStorage.setItem('favCats', JSON.stringify(favCats))
     }
+  }, [])
+
+  useEffect(() => {
     if (!catId) {
       searchHandler(null, setCatId, setLoading, true)
     }
